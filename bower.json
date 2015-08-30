@@ -1,0 +1,29 @@
+{
+  "name": "global-controller",
+  "version": "1",
+  "authors": [
+    "Andrew Weeks <adweeks@gmail.com>"
+  ],
+  "description": "a simple way to introduce global event handling to your ria",
+  "main": "controller.js",
+  "keywords": [
+    "global-controller.js",
+    "global",
+    "event",
+    "handling"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.weeksdevconsulting.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hasher": "~1.2.0",
+    "crossroads": "~0.12.2",
+    "jquery": "~2.1.4"
+  }
+}
