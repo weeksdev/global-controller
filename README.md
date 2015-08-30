@@ -6,7 +6,8 @@ I was sick of reregistering event listeners every time I recreated or destroyed 
 
 ##How do i use this?
 firstly you can use bower to install global-controller:
-`bower install bower install https://github.com/weeksdev/global-controller.git`
+
+`bower install https://github.com/weeksdev/global-controller.git`
 
 Or use git to clone this library locally.
 
