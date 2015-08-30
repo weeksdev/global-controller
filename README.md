@@ -17,7 +17,7 @@ then add references to the following scripts in your `index.html`:
 <script src="path/to/signals.min.js"></script>
 <script src="path/to/hasher.min.js"></script>
 <script src="path/to/crossroads.min.js"></script>
-<script src="path/to/global-controller.js"></script>
+<script src="path/to/controller.js"></script>
 ```
 
 You need to create a new controller similar to the following example:
