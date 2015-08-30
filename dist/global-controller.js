@@ -1,4 +1,5 @@
-﻿/* global $ */
+/* outputPath: dist */﻿
+/* global $ */
 /* global hasher */
 /* global crossroads */
 var controllers = [];
