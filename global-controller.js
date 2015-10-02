@@ -1,4 +1,4 @@
-/* outputPath: dist */﻿
+/* outputPath: dist */
 /* global $ */
 /* global hasher */
 /* global crossroads */
@@ -19,15 +19,23 @@ var Controller = function (name, config) {
             me[func] = config[func];
         }
     }
-    for (var hashMap in me.hashes) {
-        crossroads.addRoute(hashMap, me.hashes[hashMap]);
+    if (me.hashes !== undefined && me.hashes.length > 0) {
+        for (var hashMap in me.hashes) {
+            crossroads.addRoute(hashMap, me.hashes[hashMap].bind(me));
+        }
+        var parseHash = function (newHash, oldHash) {
+            crossroads.parse(newHash);
+        };
+        if (config.prependHash !== undefined) {
+            hasher.prependHash = config.prependHash;
+        } else {
+            hasher.prependHash = '!';
+        }
+        hasher.initialized.add(parseHash);
+        hasher.changed.add(parseHash);
+        if (config.hasherInit !== false) {
+            hasher.init();
+        }
     }
-    var parseHash = function (newHash, oldHash) {
-        crossroads.parse(newHash);
-    };
-    hasher.prependHash = '!';
-    hasher.initialized.add(parseHash);
-    hasher.changed.add(parseHash);
-    hasher.init();
     controllers.push(me);
 };
