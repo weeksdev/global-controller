@@ -19,7 +19,7 @@ var Controller = function (name, config) {
             me[func] = config[func];
         }
     }
-    if (me.hashes !== undefined && me.hashes.length > 0) {
+    if (me.hashes !== undefined) {
         for (var hashMap in me.hashes) {
             crossroads.addRoute(hashMap, me.hashes[hashMap].bind(me));
         }
